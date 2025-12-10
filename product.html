@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Detail Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2b8cee",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+      }
+    </style>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-4 sm:px-10 md:px-20 py-3 bg-white dark:bg-background-dark">
+<div class="flex items-center gap-4 text-slate-900 dark:text-slate-50">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clippath id="clip0_6_319"><rect fill="white" height="48" width="48"></rect></clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-slate-50 text-lg font-bold leading-tight tracking-[-0.015em]">Mosselbay Baby Gear</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-center items-center gap-9">
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="catalog.html">Strollers</a>
+<a class="text-primary dark:text-primary text-sm font-bold leading-normal" href="catalog.html">Car Seats</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="catalog.html">Cribs</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="catalog.html">High Chairs</a>
+</div>
+<div class="flex items-center gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] gap-2">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+<span class="truncate hidden sm:inline">Cart</span>
+</button>
+<a href="dashboard.html" class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-50 gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5">
+<span class="material-symbols-outlined text-2xl">person</span>
+</a>
+</div>
+</header>
+<main class="flex-1 px-4 sm:px-6 md:px-10 lg:px-20 py-8">
+<div class="mx-auto max-w-7xl">
+<div class="flex flex-wrap gap-2 pb-6">
+<a class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal hover:text-primary" href="index.html">Home</a>
+<span class="text-slate-400 dark:text-slate-500 text-sm font-medium leading-normal">/</span>
+<a class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal hover:text-primary" href="catalog.html">Car Seats</a>
+<span class="text-slate-400 dark:text-slate-500 text-sm font-medium leading-normal">/</span>
+<span class="text-slate-900 dark:text-white text-sm font-medium leading-normal">Maxi-Cosi Coral XP</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-5 gap-12">
+<!-- Left Column: Image Gallery -->
+<div class="lg:col-span-3">
+<div class="flex flex-col gap-4">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-slate-100 dark:bg-slate-800 rounded-xl aspect-square" data-alt="Front view of the Maxi-Cosi Coral XP infant car seat in a light grey fabric." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAACJXIEgWChUqMJe_iMgz-oJkDlhVqSG2wS4q66uSFHj2SBN1weZR6mKr08Uyq1foRNcbeR96QtEBSCH1HOG6j99NanGrrYnv-WzqYb_DCD8hESSLFXuMXXDnJax_lbG7zwK6xHQcR1m4JbLgHEj3UedmqLaljg95G17JNB5PjyU1T6U6Bmps6ivgzYjGK-uue8E0P60NMpLL0zFBQTND9p-l8IPzIbllNc4OEJ0XiBaOQ3j7W4i70GT7tYn0-yxX0rZH025B7c-g");'></div>
+<div class="grid grid-cols-4 gap-4">
+<div class="w-full bg-center bg-no-repeat bg-cover overflow-hidden bg-slate-100 dark:bg-slate-800 rounded-lg aspect-square cursor-pointer ring-2 ring-primary" data-alt="Side view of the car seat." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAP00HlHaCgfUwH-iNrjmdd08SJ1FzC7vYt6M3a7cxqIV2Ku6mXiNgJ5EIITpaFjguBMeS43l7oHIEV0pkQN_qBXui8gCqSd5vHZHkQVYIGWPJTcaR3Wr0t3vFeeBn_mxVtDNg-vqXJYuJQcwG4h2e0br_aWmDfE_MOx0ICI-D3kyF6AVujA2W_xJnF3JBdi6Y1fl3mZzy4B5fIz3-llGa2tvD5l4gCvic6lWH7dkgTxBD8UnSD5nSjc568uTnov_dXE5Loq38vP4g");'></div>
+<div class="w-full bg-center bg-no-repeat bg-cover overflow-hidden bg-slate-100 dark:bg-slate-800 rounded-lg aspect-square cursor-pointer opacity-70 hover:opacity-100" data-alt="Close up of the car seat fabric and buckle." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnSkIuNgOXfP3cIi5_VbwqOmR9hNrMOCLB07ZxFfZixK_gp44VG6gVE-YlcpE4wzNxH2y3IZiVAiLHZ1H3f51mPhJKcr5XUTuv7zoV0YNrIs2feJgDJJ2pgaNEIpPapZ4oFCpYw3t3pQ-rkXqsuX0SY2Mnhl5_75jQL7OnXKvJpj5e-h12FGDh4JC-DN2-LhgiGBTsmerr5Xk6an8GgXi_42HXgQV0vi2KJo7XuXEDRbYc-N50oGgUdjIVUv2_hRe1vkHJfSJNC30");'></div>
+<div class="w-full bg-center bg-no-repeat bg-cover overflow-hidden bg-slate-100 dark:bg-slate-800 rounded-lg aspect-square cursor-pointer opacity-70 hover:opacity-100" data-alt="Car seat installed in a car." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3sxMdj12QR37TXItgVFlNGvSfJqed85OMAV5xUebFHQ6DBXrIbnky4GQBlyTW-nA1fIcspLSz_bXyDw78GV1kT6kbjgPIjGwxKsDyt-lSoBTwT78BdSTPrB0hmhkbEhuKISLKoxM5T0On9xb5rZOpxlzV3DgEes2droNz-8FQntVBPS-wb1rph8HhpNh2y5d-TuMCQXh0ggheU1mmPgwuL-woN1Cn0QXQocFMwFMJ1EjGMgYui0k0PLR5o59gszLYc6R1CzIciaM");'></div>
+<div class="w-full bg-center bg-no-repeat bg-cover overflow-hidden bg-slate-100 dark:bg-slate-800 rounded-lg aspect-square cursor-pointer opacity-70 hover:opacity-100" data-alt="Detail of the carrying handle." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCgCV8pM5y2gUdamwY2F41yqtXWhLSokTEpqJ4nWOS_k42Uq3RPh69O8dTB-ktNpgOcrfgm634efI1hVjsxK2cRUVSBfvpNH6csMEtqWQxRh16N4tRb4pXFwF6N759gX6V-bsjWWr3R-ozw5HzyQp5_E12uBqC21YRnkbzDY1PUysQngLUWkcX2PtEF0G8C6iT8a0O1AYWthoJ7A7_aoTdh1xH9pTnk_u2U5KHvGUn73x1YoUqlDYKKdgVPvfsOVnEvstEEWyxtvmM");'></div>
+</div>
+</div>
+</div>
+<!-- Right Column: Product Info & Booking -->
+<div class="lg:col-span-2">
+<div class="flex flex-col gap-6">
+<div class="flex flex-col gap-2">
+<p class="text-slate-900 dark:text-white text-3xl md:text-4xl font-black leading-tight tracking-tight">Maxi-Cosi Coral XP Infant Car Seat</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal">Lightweight and easy to carry for on-the-go parents.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-1 flex-col gap-4 rounded-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900/50 p-5 cursor-pointer">
+<div class="flex flex-col gap-1">
+<h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Daily Rental</h1>
+<p class="flex items-baseline gap-1.5 text-slate-900 dark:text-white">
+<span class="text-3xl font-black leading-tight tracking-tight">R150</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">per day</span>
+</p>
+</div>
+</div>
+<div class="flex flex-1 flex-col gap-4 rounded-xl border-2 border-primary bg-primary/10 dark:bg-primary/20 p-5 cursor-pointer">
+<div class="flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<h1 class="text-slate-900 dark:text-white text-base font-bold leading-tight">Weekly Rental</h1>
+<p class="text-white text-xs font-medium leading-normal tracking-[0.015em] rounded-full bg-primary px-3 py-1 text-center">Save 24%</p>
+</div>
+<p class="flex items-baseline gap-1.5 text-slate-900 dark:text-white">
+<span class="text-3xl font-black leading-tight tracking-tight">R800</span>
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400">per week</span>
+</p>
+</div>
+</div>
+</div>
+<div class="rounded-xl border border-slate-200 dark:border-slate-800 p-5 bg-white dark:bg-background-dark">
+<div class="flex flex-col gap-4">
+<p class="font-bold text-slate-900 dark:text-white">Select Rental Dates</p>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="pickup-date">Pickup Date</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 dark:text-white focus:border-primary focus:ring-primary" id="pickup-date" type="date"/>
+</div>
+<div>
+<label class="text-sm font-medium text-slate-700 dark:text-slate-300" for="return-date">Return Date</label>
+<input class="mt-1 block w-full rounded-lg border-slate-300 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 dark:text-white focus:border-primary focus:ring-primary" id="return-date" type="date"/>
+</div>
+</div>
+<div class="flex items-center justify-between bg-slate-100 dark:bg-slate-800/50 p-4 rounded-lg">
+<span class="font-semibold text-slate-900 dark:text-white">Total Price:</span>
+<span class="text-2xl font-black text-slate-900 dark:text-white">R1,600</span>
+</div>
+<button class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-4 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] shadow-md hover:opacity-90">
+<span class="truncate">Book Now</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section: Tabs -->
+<div class="mt-16">
+<div class="border-b border-slate-200 dark:border-slate-800">
+<nav aria-label="Tabs" class="-mb-px flex space-x-8">
+<a class="whitespace-nowrap border-b-2 border-primary px-1 py-4 text-sm font-bold text-primary" href="#">Description</a>
+<a class="whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-sm font-medium text-slate-500 dark:text-slate-400 hover:border-slate-300 hover:text-slate-700 dark:hover:text-slate-200" href="#">Specifications</a>
+<a class="whitespace-nowrap border-b-2 border-transparent px-1 py-4 text-sm font-medium text-slate-500 dark:text-slate-400 hover:border-slate-300 hover:text-slate-700 dark:hover:text-slate-200" href="#">Safety &amp; Cleaning</a>
+</nav>
+</div>
+<div class="py-8 text-slate-600 dark:text-slate-300 prose prose-slate dark:prose-invert max-w-none">
+<p>The Maxi-Cosi Coral XP is the first-ever integrated car seat and carrier nesting system that’s built to help parents move about effortlessly. The Coral XP revolutionary keep-close lightweight inner carrier (weighing about 5 lbs.) can be easily removed from the car seat’s outer carrier shell with the push of a button along with the use of the padded retractable side handles.</p>
+<p>With a first-of-its-kind cross-body flex-strap, the Coral XP lets you go through your day with ease, so you can get things done, and pinch those cheeks and toes anytime you want. From car to home to wherever you want to be, the Coral XP is a revolutionary new system that makes carrying your little one easier.</p>
+<ul role="list">
+<li>Revolutionary 3-piece nesting system for a quicker, easier, and more lightweight way to get around.</li>
+<li>Lightweight inner carrier, weighing about 5 lbs.</li>
+<li>Features a first-of-its-kind cross-body flex-strap for hands-free carrying.</li>
+<li>Four modes of carry: Cross-Body Carry, Handle Carry, Standard Carry and Stroller Carry.</li>
+</ul>
+</div>
+</div>
+<!-- Related Products Section -->
+<div class="mt-16">
+<h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">You Might Also Need</h2>
+<div class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+<div class="group relative">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800 lg:aspect-none group-hover:opacity-75 lg:h-80">
+<img class="h-full w-full object-cover object-center lg:h-full lg:w-full" data-alt="A modern grey baby stroller." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzC82FbSqzQkNX4AeaFr7_a2sG9BZNC-x0oyChAptgfZITO9q9laa6i6NX6XlR51vHT1GLLL8vnFKI7ZTwVP0Z1lETuotSz5SwOKFRG4yEwP7iGPrBrRNChIgB4KfW76X6v2itPe8sMmAo8HitSRmLALbNHCaL0GkbL4f8lZmqShNeiwNFqXC-aKKtkjkQR4Wm0oHWBneu2X0GX8UWeEiji1wHI4dUgnOwMDMtfZPpJQ5VO2f-ZMqzHGmLPsP_RnHwj4KSwWOlmJU"/>
+</div>
+<div class="mt-4 flex justify-between">
+<div>
+<h3 class="text-sm text-slate-700 dark:text-slate-200">
+<a href="#"><span aria-hidden="true" class="absolute inset-0"></span>UppaBaby Vista V2</a>
+</h3>
+<p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Stroller</p>
+</div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">from R250/day</p>
+</div>
+</div>
+<div class="group relative">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800 lg:aspect-none group-hover:opacity-75 lg:h-80">
+<img class="h-full w-full object-cover object-center lg:h-full lg:w-full" data-alt="A white wooden baby crib with bedding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHZnkVCrssiJdD4F5vbVKM58_XBCNnFmg1x6SP37MQF37z_FHJYXSh6KUN-3B1ts7C_-pl4sivqUug1FcOXhVSuWj4xr0CVUjNuaQE3PUWFJnvTRcyOIqKYkqIrOAAkptbFtYf35IGIed0avEGA3OPPP9l23UePfVPL-GMjlyRE-FQKyqpQ7USuxe1nc_thfr9DXIMwgDWSiGR2V2wonVVisAyMO0FY-ZMk1VMIRTfY682AXumV3R4GoMn3LM_2Yp5dAmI_WuHoy4"/>
+</div>
+<div class="mt-4 flex justify-between">
+<div>
+<h3 class="text-sm text-slate-700 dark:text-slate-200">
+<a href="#"><span aria-hidden="true" class="absolute inset-0"></span>Travel Cot</a>
+</h3>
+<p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Sleeping</p>
+</div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">from R100/day</p>
+</div>
+</div>
+<div class="group relative">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800 lg:aspect-none group-hover:opacity-75 lg:h-80">
+<img class="h-full w-full object-cover object-center lg:h-full lg:w-full" data-alt="A wooden high chair against a plain wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAC-9rkAfTg1iLLaf6VumGAKxcrElldrm24mDnunDvQF3MS6mPdRSzEjRsZUcyqXzTmLk4B-P3THVZK0qlhwxgK4ebY4H7Mn-FCkf3fKQdmxcChBt0XKkdBYtqLYSzNuE4uB69Wn2EZKX1_GnrQY14or5Jm6bu3-A_HY6d8igW54eKMF25tpTb1DZVjoXDF1LAAeNTfuyZLDoAsk_wR3qTLVnJObrob42avymiOgZTSBJHzPoOlT0QojTxhd7Yu6Fsgup_it_GXwnc"/>
+</div>
+<div class="mt-4 flex justify-between">
+<div>
+<h3 class="text-sm text-slate-700 dark:text-slate-200">
+<a href="#"><span aria-hidden="true" class="absolute inset-0"></span>Wooden High Chair</a>
+</h3>
+<p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Feeding</p>
+</div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">from R80/day</p>
+</div>
+</div>
+<div class="group relative">
+<div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg bg-slate-100 dark:bg-slate-800 lg:aspect-none group-hover:opacity-75 lg:h-80">
+<img class="h-full w-full object-cover object-center lg:h-full lg:w-full" data-alt="A person wearing a baby carrier with a baby inside." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCBxHBV0z-FPqyzyCzgnWrMKaiceXNUNxx-ykux7czz73OsvySpjNBXLCGbbjSd1yU74RV5QYzKgmULpxHBHe1WGt2SjLiA9ls6o3ZByDgS9xKHMWKeYDmZdhTt_9e8DjivXD9iZswA_VqwmSXISoDSN_zZVp5uyyXUtgomSaWcs0KyQlIaJ8mnoi9k8BrCYSSVXQ6z_pGWKmbWFKWRNTa_fr_AClHe5mTXKxxi-48sfZ-HKYfsWWPshjGhn_6iKHm6dj6BMlMN_CI"/>
+</div>
+<div class="mt-4 flex justify-between">
+<div>
+<h3 class="text-sm text-slate-700 dark:text-slate-200">
+<a href="#"><span aria-hidden="true" class="absolute inset-0"></span>ErgoBaby Carrier</a>
+</h3>
+<p class="mt-1 text-sm text-slate-500 dark:text-slate-400">Carriers</p>
+</div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">from R90/day</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>
