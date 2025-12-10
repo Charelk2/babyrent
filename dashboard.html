@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Account/Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#2b8cee",
+            "background-light": "#f6f7f8",
+            "background-dark": "#101922",
+          },
+          fontFamily: {
+            "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.5rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<div class="flex flex-1">
+<!-- SideNavBar -->
+<aside class="flex flex-col w-64 bg-white dark:bg-background-dark dark:border-r dark:border-gray-800 p-4 shrink-0">
+<div class="flex items-center gap-3 px-3 py-2 mb-4">
+<span class="material-symbols-outlined text-primary text-3xl">child_friendly</span>
+<h1 class="text-lg font-bold text-slate-800 dark:text-white">Mosselbay Baby Gear</h1>
+</div>
+<div class="flex flex-col gap-4 mb-auto">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile picture" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDe-dzBYRCMhNRWumbCLJxQCjDpMB6UZz51ArLGXvE6Jokd9aGLibDVxW_DHzxyA6D5WEFU0tVZk3-hFYMDlEB0KkYDhtQecRQcUjK-sXb9vPWbg0EVxgdHpdjUxZjiNH3p2LX1jkpHHETU5ZHcOnULWlbzCInkzw1h9x0C-KFb1NB1s2L8_NcaqU1XN7u66Xh9W6pVRS_jZAY82pK3KLARhHyYO5sX5gfxZ7dWsmYhR40XeqlCFwoqYvnSmdpPH_5sKoPZ87v7yv0");'></div>
+<div class="flex flex-col">
+<h2 class="text-slate-800 dark:text-slate-100 text-base font-medium leading-normal">Sarah Connor</h2>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">sarah.connor@email.com</p>
+</div>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/10 dark:bg-primary/20" href="dashboard.html">
+<span class="material-symbols-outlined text-primary">dashboard</span>
+<p class="text-primary text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800" href="dashboard.html">
+<span class="material-symbols-outlined">inventory_2</span>
+<p class="text-sm font-medium leading-normal">My Rentals</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800" href="dashboard.html">
+<span class="material-symbols-outlined">person</span>
+<p class="text-sm font-medium leading-normal">Profile</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800" href="dashboard.html">
+<span class="material-symbols-outlined">credit_card</span>
+<p class="text-sm font-medium leading-normal">Payment Methods</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800" href="contact.html">
+<span class="material-symbols-outlined">help</span>
+<p class="text-sm font-medium leading-normal">Help</p>
+</a>
+</nav>
+</div>
+<div class="flex flex-col gap-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800" href="index.html">
+<span class="material-symbols-outlined">logout</span>
+<p class="text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 p-8 overflow-y-auto">
+<div class="max-w-4xl mx-auto">
+<!-- PageHeading -->
+<header class="flex flex-wrap justify-between gap-3 mb-6">
+<h1 class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Welcome back, Sarah!</h1>
+</header>
+<!-- Stats -->
+<section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark/50">
+<p class="text-slate-700 dark:text-slate-300 text-base font-medium leading-normal">Active Rentals</p>
+<p class="text-slate-900 dark:text-white tracking-light text-3xl font-bold leading-tight">2</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark/50">
+<p class="text-slate-700 dark:text-slate-300 text-base font-medium leading-normal">Upcoming Bookings</p>
+<p class="text-slate-900 dark:text-white tracking-light text-3xl font-bold leading-tight">1</p>
+</div>
+<div class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200 dark:border-slate-800 bg-white dark:bg-background-dark/50">
+<p class="text-slate-700 dark:text-slate-300 text-base font-medium leading-normal">Saved Items</p>
+<p class="text-slate-900 dark:text-white tracking-light text-3xl font-bold leading-tight">5</p>
+</div>
+</section>
+<!-- My Rentals Section -->
+<section>
+<!-- SectionHeader -->
+<h2 class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">My Rentals</h2>
+<!-- SegmentedButtons -->
+<div class="mb-6">
+<div class="flex h-10 w-full sm:w-80 items-center justify-center rounded-lg bg-slate-100 dark:bg-slate-800 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 text-slate-500 has-[:checked]:bg-white has-[:checked]:dark:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-slate-800 has-[:checked]:dark:text-white text-sm font-medium leading-normal">
+<span class="truncate">Current</span>
+<input checked="" class="invisible w-0" name="rental-status" type="radio" value="Current"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 text-slate-500 has-[:checked]:bg-white has-[:checked]:dark:bg-slate-700 has-[:checked]:shadow-sm has-[:checked]:text-slate-800 has-[:checked]:dark:text-white text-sm font-medium leading-normal">
+<span class="truncate">Past</span>
+<input class="invisible w-0" name="rental-status" type="radio" value="Past"/>
+</label>
+</div>
+</div>
+<!-- Rental Items List -->
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="bg-white dark:bg-background-dark/50 border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-24 shrink-0" data-alt="A foldable baby stroller" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAPLf7XibkkrkGahUv478fPc_BCCFWRH45IrXzXIlml1EbMW2F2hUlNmUuRASr0sVT7eMx8qmwglmeGq8847kb7eY2K5bItuVPqtg66I2hOj_zj4Bu512GyoSpEvhF5HktHlimKeXoDclJJ2bZJU8vQnIo5VGlkq_CLrCC2D4xB8YDz9HepZVJqh9ObH9peS_dAJJX0N_OmcoFgeipPvPabATOuJU4cfmStI_QfjwSZekmAa15_Ls4d0AShOy9H4Vki1-iXBDU1PWw");'></div>
+<div class="flex-grow">
+<h3 class="font-bold text-lg text-slate-800 dark:text-white">Travel Stroller</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Rented: 15 July - 22 July 2024</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Total: R350.00</p>
+</div>
+<div class="flex items-center gap-4 w-full sm:w-auto">
+<span class="inline-flex items-center rounded-full bg-blue-100 dark:bg-blue-900/50 px-3 py-1 text-xs font-medium text-blue-700 dark:text-blue-300">Delivered</span>
+<button class="bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg text-sm">Rent Again</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="bg-white dark:bg-background-dark/50 border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-24 shrink-0" data-alt="A portable baby crib" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCKvEgYXveYaRtWgNWH7X7BtcHB97qttpdxhJnK0lhVJKHTrLTJoxTvZ_zFQ4PpMqnTD76_gthRXRKRc107tuFUPrksj_usPOgF5aOjPPKXZUukDHvYSgDIMusEZab6WXO9FBLeFZ_8Q2wmlMikGJt-QHLjm6WWI8tBCBKv0jw3ojLGy5sTmSNdnWgNpXNgJXE71mNK0_FCj_RxgG9iNIDpvNv2eMYSAuYo5qk7KIl6hWXwgFzIV0_Lsuk2LJRkiSgcn5DU2g6_igg");'></div>
+<div class="flex-grow">
+<h3 class="font-bold text-lg text-slate-800 dark:text-white">Portable Crib</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Rented: 15 July - 22 July 2024</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Total: R400.00</p>
+</div>
+<div class="flex items-center gap-4 w-full sm:w-auto">
+<span class="inline-flex items-center rounded-full bg-orange-100 dark:bg-orange-900/50 px-3 py-1 text-xs font-medium text-orange-700 dark:text-orange-300">Pending Return</span>
+<button class="bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg text-sm">Rent Again</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="bg-white dark:bg-background-dark/50 border border-slate-200 dark:border-slate-800 rounded-xl p-4 flex flex-col sm:flex-row items-start sm:items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-24 shrink-0" data-alt="A baby car seat" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDeP6K2kfZpLOIPQ34U3iP63QOwog2m15-lRjLVsdDLCQ7xGaHzjp7ukTISKf1f4it6SysCZ5FQlcqxVGtVzZ8aVxyKfj9LuWIHjGy-tf7Dwko1xQH-C_vGXgGE69oR_8fVliI9w6G9HBTgzVm27Y7DWH3rFHE7SHW_G5_96g-oiLK-sbSNIvXiOcNlxc44Kq99BG7AvitBsRRuozY4GLJTFs15o1rUGGkhbSNwp8Osm503w3xAmAURdE5TER0OfybV0XUp2rJJgwo");'></div>
+<div class="flex-grow">
+<h3 class="font-bold text-lg text-slate-800 dark:text-white">Infant Car Seat</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400">Upcoming: 01 Aug - 08 Aug 2024</p>
+<p class="text-sm text-slate-500 dark:text-slate-400">Total: R300.00</p>
+</div>
+<div class="flex items-center gap-4 w-full sm:w-auto">
+<span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/50 px-3 py-1 text-xs font-medium text-green-700 dark:text-green-300">Confirmed</span>
+<button class="bg-slate-200 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-medium py-2 px-4 rounded-lg text-sm cursor-not-allowed">Rent Again</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+</div>
+</div>
+</body></html>

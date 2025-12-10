@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Product Catalog - BabyGear Rentals</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2b8cee",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-[#0d141b] dark:text-slate-50">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-800 px-4 sm:px-6 lg:px-8 py-3 w-full sticky top-0 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm z-10">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-[#0d141b] dark:text-slate-50">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M24 4H42V17.3333V30.6667H24V44H6V30.6667V17.3333H24V4Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">BabyGear Rentals</h2>
+</div>
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="index.html">Home</a>
+<a class="text-sm font-medium leading-normal text-primary" href="catalog.html">Catalog</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="rental_process.html">How it Works</a>
+<a class="text-sm font-medium leading-normal hover:text-primary dark:hover:text-primary" href="#">FAQ</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-2 sm:gap-4 items-center">
+<label class="relative hidden sm:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-slate-500 dark:text-slate-400 flex bg-slate-200/60 dark:bg-slate-800/60 items-center justify-center pl-3 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined text-lg">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-r-lg text-[#0d141b] dark:text-slate-50 focus:outline-0 focus:ring-2 focus:ring-primary/50 border-none bg-slate-200/60 dark:bg-slate-800/60 h-full placeholder:text-slate-500 dark:placeholder:text-slate-400 px-4 text-sm font-normal leading-normal" placeholder="Search gear..." value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
+<span class="truncate">Log In</span>
+</button>
+<a href="dashboard.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-200 dark:bg-slate-800 text-[#0d141b] dark:text-slate-50 text-sm font-bold leading-normal tracking-[0.015em] hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">
+<span class="truncate">Sign Up</span>
+</a>
+</div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<div class="flex flex-col lg:flex-row gap-8">
+<!-- Filter Sidebar -->
+<aside class="w-full lg:w-64 xl:w-72 flex-shrink-0">
+<div class="sticky top-24 p-6 rounded-xl bg-white dark:bg-slate-900/50 border border-slate-200 dark:border-slate-800">
+<h3 class="text-lg font-bold mb-4">Filter Products</h3>
+<div class="space-y-6">
+<div>
+<h4 class="font-semibold mb-3">Product Type</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><input checked="" class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Strollers</label>
+<label class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Car Seats</label>
+<label class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> High Chairs</label>
+<label class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Cribs</label>
+<label class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Carriers</label>
+</div>
+</div>
+<div>
+<h4 class="font-semibold mb-3">Brand</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Chicco</label>
+<label class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Graco</label>
+<label class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Maxi-Cosi</label>
+<label class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> BabyBjorn</label>
+</div>
+</div>
+<div>
+<h4 class="font-semibold mb-3">Age Suitability</h4>
+<div class="space-y-2">
+<label class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Newborn (0-6m)</label>
+<label class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Infant (6-12m)</label>
+<label class="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-300"><input class="form-checkbox rounded text-primary focus:ring-primary/50" type="checkbox"/> Toddler (1-3y)</label>
+</div>
+</div>
+<div class="flex flex-col gap-2 pt-4 border-t border-slate-200 dark:border-slate-800">
+<button class="flex w-full items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-colors">Apply Filters</button>
+<button class="flex w-full items-center justify-center rounded-lg h-10 px-4 bg-slate-200 dark:bg-slate-800 text-[#0d141b] dark:text-slate-50 text-sm font-bold hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors">Clear All</button>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<div class="flex-1">
+<div class="flex flex-wrap gap-2 pb-4">
+<a class="text-slate-500 dark:text-slate-400 text-sm font-medium leading-normal hover:text-primary" href="index.html">Home</a>
+<span class="text-slate-400 dark:text-slate-500 text-sm font-medium leading-normal">/</span>
+<span class="text-[#0d141b] dark:text-slate-50 text-sm font-medium leading-normal">Catalog</span>
+</div>
+<div class="flex flex-wrap justify-between gap-4 items-center pb-4">
+<div class="flex min-w-72 flex-col gap-1">
+<p class="text-[#0d141b] dark:text-slate-50 text-4xl font-black leading-tight tracking-[-0.033em]">Our Rental Gear</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal">Browse our collection of high-quality baby gear for your visit to Mosselbay.</p>
+</div>
+<div class="flex gap-2">
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-4">
+<p class="text-[#0d141b] dark:text-slate-50 text-sm font-medium leading-normal">Sort by Price</p>
+<span class="material-symbols-outlined text-base text-slate-500 dark:text-slate-400">arrow_drop_down</span>
+</button>
+<button class="flex h-10 shrink-0 items-center justify-center gap-x-2 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-4">
+<p class="text-[#0d141b] dark:text-slate-50 text-sm font-medium leading-normal">Sort by Name</p>
+<span class="material-symbols-outlined text-base text-slate-500 dark:text-slate-400">arrow_drop_down</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
+<div class="flex flex-col gap-4 p-4 bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 group transition-all hover:shadow-lg hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="A modern, grey city tourer stroller on a light background." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA4v7lYO1I4pm4x5J0Y7UP7_W-nOOsrCKydpAgpCg67rI8c4ZoznW9p0DI91cjbFzDFe8BvOeCskak3msXIanTkCP23wm-upMQR7sBeDnsPhCY2bIHLMZWhPf411LPcaHVGfUgjrGXTz8aptMbRmkC8S5HTvU2CDhNa4fssKGt5ivq2hdJOzBuqOcD_K54TUehae01vFxf-MS0BcpTpPlaJkAbHBOLT-Doz43KeqN51ALliDt4OM13QNLmcG46Mq3B_9JP7rEnDMwI");'></div>
+<div class="flex-1 flex flex-col">
+<p class="text-[#0d141b] dark:text-slate-50 text-lg font-bold leading-normal">City Tourer Stroller</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal mt-1 flex-1">Lightweight and perfect for navigating Mosselbay's streets.</p>
+<p class="text-slate-600 dark:text-slate-300 text-base font-semibold leading-normal mt-3">R150 / day</p>
+</div>
+<a href="product.html" class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-300 text-sm font-bold leading-normal tracking-[0.015em] group-hover:bg-primary group-hover:text-white transition-colors">View Details</a>
+</div>
+<div class="flex flex-col gap-4 p-4 bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 group transition-all hover:shadow-lg hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="A portable high chair attached to a wooden dining table." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAJf6_TAmTKRaRSaxT7DAFpoynFngDQV2HCeGTjgUYP3hyt3LGNEA2Sd7XwtWT0HN4sgduV7IceZkvvkDt_E5px0GPZoF7EvwwOJYLs7nysyAGojWmrvhZE6NscTFINEJN2tZhCLULDMwlMs50Vbf_ogRJspC3aAGv_rTlnpu54Vr6VbLk9j_2V2cddwn6VjGFMYrnTK2hMrcaYLt50dPjNcWTtwDwpPAWI34XAKVMGO-TqrYJldXrxkgYFNZWYZqjDSte98TSKbDM");'></div>
+<div class="flex-1 flex flex-col">
+<p class="text-[#0d141b] dark:text-slate-50 text-lg font-bold leading-normal">Portable High Chair</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal mt-1 flex-1">Easy to clean and sets up in seconds at any table.</p>
+<p class="text-slate-600 dark:text-slate-300 text-base font-semibold leading-normal mt-3">R80 / day</p>
+</div>
+<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-300 text-sm font-bold leading-normal tracking-[0.015em] group-hover:bg-primary group-hover:text-white transition-colors">View Details</button>
+</div>
+<div class="flex flex-col gap-4 p-4 bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 group transition-all hover:shadow-lg hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="A cozy travel crib set up in a bright, modern room." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDA0sqCZwGBqObvB7Q2KtAlurID0Vpxy74h29Yh0EFpuYeCNwbIlRwHMkxifmPAZqFoDUTiEyEVjn0H6FicPBxv2MCaiJuwymNY10hJud9EV4kjeATpRKBbprGmOV0bodcQzG4mxC03roYJ_vlPKlS3T6XolIqtF-qrsDtQToQq7nH0lwbvaLk1_oUSnaRcPHftFzsciH8-lRvY6pTl3KXecmLJhC3u7BhcwIzOoKDWOVkRJEe4gbP53GPkxjBBoc5zHW6hWKsrrfY");'></div>
+<div class="flex-1 flex flex-col">
+<p class="text-[#0d141b] dark:text-slate-50 text-lg font-bold leading-normal">Cozy Travel Crib</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal mt-1 flex-1">Ensures a safe and comfortable sleep for your little one.</p>
+<p class="text-slate-600 dark:text-slate-300 text-base font-semibold leading-normal mt-3">R200 / day</p>
+</div>
+<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-300 text-sm font-bold leading-normal tracking-[0.015em] group-hover:bg-primary group-hover:text-white transition-colors">View Details</button>
+</div>
+<div class="flex flex-col gap-4 p-4 bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 group transition-all hover:shadow-lg hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="A sleek black infant car seat on a neutral background." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsIPwugjvhBHNugFkSQ-cVAeruSMnkhaA2Rtiri81NsE8fRszU1EdrVXvFj9JwH3G9I74dHBrFfY8s9INWva4QA5bzlTiuuZQjs7VHzEDIIzRqPVeJyTX9iJnrEliJn7XUtLWys3a2RJg-PZoNojZ6C3NNmJLrsY-n8jh28KJlrPmlOmqrfEW6BH7dj6HsP_5mP_X4qj5ic5g4wqf7yij3ipEeEj_FCRbOX1TCFScT-4kw-EvGWbsKaVhrIASTEGLkhbs80P24v1I");'></div>
+<div class="flex-1 flex flex-col">
+<p class="text-[#0d141b] dark:text-slate-50 text-lg font-bold leading-normal">Infant Car Seat</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal mt-1 flex-1">Top-rated for safety and comfort for your peace of mind.</p>
+<p class="text-slate-600 dark:text-slate-300 text-base font-semibold leading-normal mt-3">R180 / day</p>
+</div>
+<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-300 text-sm font-bold leading-normal tracking-[0.015em] group-hover:bg-primary group-hover:text-white transition-colors">View Details</button>
+</div>
+<div class="flex flex-col gap-4 p-4 bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 group transition-all hover:shadow-lg hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="A father pulling a toddler in an all-terrain wagon on a sandy path." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBCTf2Rwpv_gSz7kQr_4NaQR_5aHmiR_cGyWgKjyQ2rpMZA7BKoPPbETPmTm1n2TzfKVrJKew2V_FEOXMl3XGZaVndor7mXjpxbQYfNo0jEOIKIWoPgMCAdPuYw-J6et8Un11y8xJ3s_8Q5t1b98CnbAGGTGIs4XjYd6697mJnN3setpwNgGRhgUI_izzXUBgk9hKT6biIAEnz7VOw7MFVwmDMAsRbBp7Ci2uJS4GG1IN4qEUyuDEv_CXfHlay5W9Yk9Kc9usHlhX0");'></div>
+<div class="flex-1 flex flex-col">
+<p class="text-[#0d141b] dark:text-slate-50 text-lg font-bold leading-normal">All-Terrain Wagon</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal mt-1 flex-1">Great for beach days and exploring the town with ease.</p>
+<p class="text-slate-600 dark:text-slate-300 text-base font-semibold leading-normal mt-3">R250 / day</p>
+</div>
+<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-300 text-sm font-bold leading-normal tracking-[0.015em] group-hover:bg-primary group-hover:text-white transition-colors">View Details</button>
+</div>
+<div class="flex flex-col gap-4 p-4 bg-white dark:bg-slate-900/50 rounded-xl border border-slate-200 dark:border-slate-800 group transition-all hover:shadow-lg hover:-translate-y-1">
+<div class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg" data-alt="A mother holding her baby in a black Baby Bjorn carrier." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDhSrYJ8NY47klH3V98FlqCRRKS1636clRiQb55rzNdpztY7Qt3HHqMYPUeG_EpgYGSo1G5RQaqiRTEp9qsk56PgB8X_NsTnGnZZvH6ImtP-wWQbghWvZfNP7p8pc6mqsdFe1lDnZZ5nf2EIo6kHJQTUGJt4R6mcNQkycErSnlgKggxIKHViD7gzbaL-wr49YaOi0aFS3H6ceoNvMVysnOvtYCkrAjrnVQWo1whhnlgtu2KWzklg5s8P_vkcJpYO1Ut-Rlmn03tfis");'></div>
+<div class="flex-1 flex flex-col">
+<p class="text-[#0d141b] dark:text-slate-50 text-lg font-bold leading-normal">Baby Bjorn Carrier</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal mt-1 flex-1">Keep your baby close and your hands free while on the move.</p>
+<p class="text-slate-600 dark:text-slate-300 text-base font-semibold leading-normal mt-3">R100 / day</p>
+</div>
+<button class="flex w-full min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/20 dark:bg-primary/30 text-primary dark:text-primary-300 text-sm font-bold leading-normal tracking-[0.015em] group-hover:bg-primary group-hover:text-white transition-colors">View Details</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>
