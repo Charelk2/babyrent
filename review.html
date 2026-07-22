@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Review and Ratings Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2b8cee",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-700 px-4 md:px-10 py-4 w-full max-w-6xl mx-auto">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_6_319)">
+<path d="M8.57829 8.57829C5.52816 11.6284 3.451 15.5145 2.60947 19.7452C1.76794 23.9758 2.19984 28.361 3.85056 32.3462C5.50128 36.3314 8.29667 39.7376 11.8832 42.134C15.4698 44.5305 19.6865 45.8096 24 45.8096C28.3135 45.8096 32.5302 44.5305 36.1168 42.134C39.7033 39.7375 42.4987 36.3314 44.1494 32.3462C45.8002 28.361 46.2321 23.9758 45.3905 19.7452C44.549 15.5145 42.4718 11.6284 39.4217 8.57829L24 24L8.57829 8.57829Z" fill="currentColor"></path>
+</g>
+<defs>
+<clippath id="clip0_6_319">
+<rect fill="white" height="48" width="48"></rect>
+</clippath>
+</defs>
+</svg>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">Mosselbay Baby Gear</h2>
+</div>
+<div class="hidden md:flex items-center gap-9">
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal" href="index.html">Home</a>
+<a class="text-slate-900 dark:text-white text-sm font-bold leading-normal" href="catalog.html">Products</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal" href="dashboard.html">My Rentals</a>
+<a class="text-slate-700 dark:text-slate-300 text-sm font-medium leading-normal" href="contact.html">Contact</a>
+</div>
+<div class="hidden md:flex items-center gap-2">
+<a href="login.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-200/80 dark:bg-slate-700/80 text-slate-900 dark:text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Log In</span>
+</a>
+<a href="login.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Sign Up</span>
+</a>
+</div>
+</header>
+<main class="px-4 py-10 md:py-16 flex flex-1 justify-center">
+<div class="flex flex-col max-w-3xl flex-1 gap-8">
+<div class="flex flex-col gap-3 text-center">
+<p class="text-slate-900 dark:text-white text-4xl md:text-5xl font-black leading-tight tracking-[-0.033em]">Write a Review</p>
+<p class="text-slate-500 dark:text-slate-400 text-lg font-normal leading-normal">Share your experience with the products you rented.</p>
+</div>
+<div class="flex flex-col gap-8 bg-white dark:bg-background-dark p-6 md:p-8 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
+<div class="flex flex-col sm:flex-row items-stretch justify-between gap-6 rounded-lg bg-background-light dark:bg-slate-800/50 p-4 border border-slate-200 dark:border-slate-800">
+<div class="flex flex-col gap-2 flex-1 justify-center">
+<p class="text-slate-900 dark:text-white text-lg font-bold leading-tight">Stokke Tripp Trapp High Chair</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal">Rented: 15 Oct - 22 Oct 2023</p>
+</div>
+<div class="w-full sm:w-48 h-32 bg-center bg-no-repeat bg-cover rounded-lg" data-alt="Stokke Tripp Trapp High Chair in natural wood color" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBsQ3r81aaKG3GC0DI1qy8aZiALtbcsRMx5KZRv8YzIeWzUTccG3YAXft9LFQowmVQ0jJVl_xApwLdVPyVI622-pFauCA0mhpOuuqtVVtGZYVsE3beThuPQtLhI0MRVvDvS8qZjs6FRYYxxhXxFT5cnBc3QLy2f151yBMAxqIdfyIuyAkiV9zC0R9r3T40w6NaE3sXe9f06nGl9qDzbFwurq1oOwiEBZzFWkHduG5vWBrXuIB39xdDhaskosi-WyIUso1WRpQZnQf4");'></div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Your Overall Rating</h3>
+<div class="flex items-center gap-2">
+<button class="text-yellow-400 hover:text-yellow-500 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 32px;">star</span>
+</button>
+<button class="text-yellow-400 hover:text-yellow-500 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 32px;">star</span>
+</button>
+<button class="text-yellow-400 hover:text-yellow-500 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 32px;">star</span>
+</button>
+<button class="text-yellow-400 hover:text-yellow-500 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 32px;">star</span>
+</button>
+<button class="text-slate-300 dark:text-slate-600 hover:text-yellow-400 transition-colors">
+<span class="material-symbols-outlined" style="font-size: 32px;">star</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<label class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]" for="review-text">Share your thoughts</label>
+<textarea class="w-full rounded-lg border border-slate-300 dark:border-slate-700 bg-background-light dark:bg-slate-800/50 p-4 text-slate-800 dark:text-slate-200 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:border-primary focus:ring-primary focus:ring-2 transition" id="review-text" name="review" placeholder="Share your experience... What did you love? Was anything missing?" rows="6"></textarea>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em]">Add Photos (Optional)</h3>
+<div class="flex justify-center w-full px-6 py-10 border-2 border-dashed border-slate-300 dark:border-slate-700 rounded-lg bg-background-light dark:bg-slate-800/50">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl text-slate-400 dark:text-slate-500 mx-auto">cloud_upload</span>
+<p class="mt-2 text-sm text-slate-500 dark:text-slate-400"><span class="font-semibold text-primary">Click to upload</span> or drag and drop</p>
+<p class="text-xs text-slate-400 dark:text-slate-500">PNG, JPG, GIF up to 10MB</p>
+</div>
+</div>
+</div>
+<a href="dashboard.html" class="w-full flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 focus:ring-4 focus:ring-primary/30 transition-all">
+<span class="truncate">Submit Review</span>
+</a>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>

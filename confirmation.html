@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Confirmation Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#2b8cee",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101922",
+            },
+            fontFamily: {
+              "display": ["Plus Jakarta Sans", "Noto Sans", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.5rem", "lg": "1rem", "xl": "1.5rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-slate-700 px-4 sm:px-10 py-3 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="text-primary size-7">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">Mosselbay Baby Gear</h2>
+</div>
+<div class="hidden md:flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-slate-900 dark:text-slate-300 text-sm font-medium leading-normal" href="catalog.html">Gear</a>
+<a class="text-slate-900 dark:text-slate-300 text-sm font-medium leading-normal" href="#">Locations</a>
+<a class="text-slate-900 dark:text-slate-300 text-sm font-medium leading-normal" href="contact.html">About Us</a>
+<a class="text-slate-900 dark:text-slate-300 text-sm font-medium leading-normal" href="dashboard.html">My Bookings</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="User profile avatar image" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuASvwa4RS20Pvix-khKIfzPL7L5AHn_6Tvz_ZevFejYL4rJFjiDkuEq6K15dyKIlmaDB_HY34cik61UOcbLmGOyxGu9Eptp9Pm1otfi2Y0NrulgOpML9k5nIZn4f6kM9CE8H8Zyo8kV8Ehs-ZNXothtBXArwQ6DXb3kJE7_3WzaWL9KmQnokoDUKZu8mUWSPi3Q9LNkyGpq10SluygUipZjQEL3Y7FybtKMnhri8art14OEMFCdCJxmx-aSDW2DkJ-NxNbX4KEHxZk");'></div>
+</div>
+</header>
+<main class="px-4 sm:px-8 flex flex-1 justify-center py-10">
+<div class="layout-content-container flex flex-col max-w-3xl flex-1 gap-8">
+<div class="flex flex-col sm:flex-row flex-wrap justify-between items-start gap-4">
+<div class="flex flex-col gap-3">
+<p class="text-slate-900 dark:text-white text-4xl font-black leading-tight tracking-[-0.033em]">Your Booking is Confirmed!</p>
+<p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-normal">We've sent a confirmation email to your address.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-200 text-sm font-bold leading-normal tracking-[0.015em] gap-2">
+<span class="material-symbols-outlined" data-icon="print">print</span>
+<span class="truncate">Print Confirmation</span>
+</button>
+</div>
+<div class="p-4 @container bg-white dark:bg-slate-800/50 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700">
+<div class="flex flex-col items-stretch justify-start rounded-lg">
+<div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 px-4">
+<p class="text-slate-800 dark:text-slate-200 text-lg font-bold leading-tight tracking-[-0.015em]">Booking Reference</p>
+<div class="flex items-end gap-3 justify-between">
+<div class="flex flex-col gap-1">
+<p class="text-primary text-2xl font-bold leading-normal">#ABC-123456</p>
+<p class="text-slate-500 dark:text-slate-400 text-base font-normal leading-normal">Please keep this number for your records.</p>
+</div>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-5 bg-primary text-white text-sm font-medium leading-normal gap-2">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span class="truncate">View Booking</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h2 class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4">Your Rental Summary</h2>
+<div class="w-full bg-white dark:bg-slate-800/50 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 divide-y divide-slate-200 dark:divide-slate-700">
+<div class="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14" data-alt="Travel cot for infants" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCmjFGdF2cFjfS3dfbKUn3fSxV3QHKE0Ws_Q0Qcn6-q66s-MDoVHXl7vy456c2U25yRMGrHcBnmPTD-2DzzHMzTs-rZ3Z4gHZMIoP8vjn0h_y2TP45Wz3_D9Vb67ugFDTrj9gJO6ISiarN1_97EA9RCqhz55ngsv-xCOKV7WZwJ6DcESDofwqN09oRXAzjSzaMmsR1w0Vn-J0FcrPEoW6vDi_P9n5jyAaEAAp2kJXnWYf6_aAirqFV7UG9p_XDqqc9D3FGkIB9563E");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal line-clamp-1">Travel Cot</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal line-clamp-2">Safe and comfortable for your little one.</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-slate-600 dark:text-slate-300 text-base font-normal leading-normal">Quantity: 1</p></div>
+</div>
+<div class="flex items-center gap-4 px-4 min-h-[72px] py-2 justify-between">
+<div class="flex items-center gap-4">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-lg size-14" data-alt="High chair for toddlers" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnuOySFLg8cxI-0vKh7wt4mknrytJOYnKZDML3DCfEKrbnSSYg3S1gr9PP3kox_4E59GXUv-RWfQOU7pcBsi6ek2G-UZsD3Xw28hwpAL6n3W4mZsp8GL0LYvh5aJ6tX58NZ8FlB4RSAaES83Vv1W2BtVQvt6dBPfLvUdPWv5f8ezSQxWoQ5vMijWfstSqQ6sGipE0fLoJ9DCZK5svXrtQHr9wKopYVqo48BIbmZm52RwDtdm_zEeu4fB9uza4VGUrD5_a69WTW8XA");'></div>
+<div class="flex flex-col justify-center">
+<p class="text-slate-900 dark:text-white text-base font-medium leading-normal line-clamp-1">High Chair</p>
+<p class="text-slate-500 dark:text-slate-400 text-sm font-normal leading-normal line-clamp-2">Sturdy and easy to clean for meal times.</p>
+</div>
+</div>
+<div class="shrink-0"><p class="text-slate-600 dark:text-slate-300 text-base font-normal leading-normal">Quantity: 1</p></div>
+</div>
+</div>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Rental Dates</h3>
+<div class="bg-white dark:bg-slate-800/50 rounded-xl p-4 shadow-sm border border-slate-200 dark:border-slate-700 flex justify-between">
+<div class="flex flex-col">
+<span class="text-sm text-slate-500 dark:text-slate-400">Pickup</span>
+<span class="font-bold text-slate-800 dark:text-slate-200">Mon, 28 Oct 2024</span>
+</div>
+<div class="flex flex-col text-right">
+<span class="text-sm text-slate-500 dark:text-slate-400">Return</span>
+<span class="font-bold text-slate-800 dark:text-slate-200">Fri, 01 Nov 2024</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="text-lg font-bold text-slate-900 dark:text-white">Cost Summary</h3>
+<div class="bg-white dark:bg-slate-800/50 rounded-xl p-4 shadow-sm border border-slate-200 dark:border-slate-700 space-y-2">
+<div class="flex justify-between text-slate-600 dark:text-slate-300"><span>Subtotal</span><span>R800.00</span></div>
+<div class="flex justify-between text-slate-600 dark:text-slate-300"><span>Delivery Fee</span><span>R50.00</span></div>
+<div class="flex justify-between font-bold text-slate-900 dark:text-white pt-2 border-t border-slate-200 dark:border-slate-700"><span>Total Paid</span><span>R850.00</span></div>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-4">
+<h2 class="text-slate-900 dark:text-white text-[22px] font-bold leading-tight tracking-[-0.015em] px-4">Pickup &amp; Return Information</h2>
+<div class="w-full bg-white dark:bg-slate-800/50 rounded-xl shadow-sm border border-slate-200 dark:border-slate-700 flex flex-col md:flex-row overflow-hidden">
+<div class="p-6 flex-1">
+<h3 class="font-bold text-lg text-slate-900 dark:text-white">Mosselbay Baby Gear</h3>
+<p class="text-slate-500 dark:text-slate-400 mt-1">123 Beach Rd, Mosselbay, 6500</p>
+<div class="mt-4 pt-4 border-t border-slate-200 dark:border-slate-700">
+<p class="font-semibold text-slate-800 dark:text-slate-200">Operating Hours:</p>
+<p class="text-slate-500 dark:text-slate-400">Mon - Sat: 9:00 AM - 5:00 PM</p>
+<p class="text-slate-500 dark:text-slate-400">Sun: Closed</p>
+</div>
+</div>
+<div class="md:w-1/3 w-full h-48 md:h-auto bg-cover bg-center" data-location="Mosselbay" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA-W3-Rz4tudlB1d6aIc-ynwUQp2UZVLJ8vLOyhFKAgj3sziaPjRuFe9oSmWvLSV0bzheAr-UpmTAT3MJeXBVo_WzzuLmVFoI47K7NM8b03lY9s79qX_zy_4hpeOhDwqlZE0MTySzEnndxiX0kea6bWqrrc3x_oBX4PMemBuJ4AQf66uVhEk4pjqj3jvsxht0OFQZB8JBhuxg2O3Qe8t0TnFJwtMZl6bEWNl12s4LqLnpiKtQLreWk8jq1nFyvhHFner4CNiTRd77M')"></div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
+<a href="dashboard.html" class="flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">View My Bookings</span>
+</a>
+<a href="index.html" class="flex w-full sm:w-auto min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-slate-200 dark:bg-slate-700 text-slate-900 dark:text-slate-200 text-base font-bold leading-normal tracking-[0.015em]">
+<span class="truncate">Back to Homepage</span>
+</a>
+</div>
+</div>
+</main>
+</div>
+</div>
+</body></html>
